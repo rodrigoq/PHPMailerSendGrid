@@ -91,6 +91,9 @@ class PHPMailerSendGrid extends PHPMailer
             }
 
             if(isset($this->Body)) {
+                if($this->ContentType != 'text/plain') {
+                    $this->ContentType = 'text/html';
+                }
                 $mail->addContent($this->ContentType, $this->Body);
             }
 
