@@ -12,7 +12,6 @@
 
 namespace PHPMailer\PHPMailer;
 
-use Sendgrid;
 use SendGrid\Mail\Mail;
 
 /**
@@ -104,7 +103,7 @@ class PHPMailerSendGrid extends PHPMailer
                     $attach[2], $attach[6], $attach[7]);
             }
 
-            $sendgrid = new SendGrid($this->SendGridApiKey);
+            $sendgrid = new \SendGrid($this->SendGridApiKey);
             $response = $sendgrid->send($mail);
 
             // Error codes: https://sendgrid.com/docs/API_Reference/Web_API_v3/Mail/errors.html
