@@ -39,7 +39,7 @@ $mail = new PHPMailerSendGrid(true);                      // Passing `true` enab
 try {
     //SendGrid settings
     $mail->isSendGrid();                                  // Set mailer to use SendGrid
-    // Set the SendGrid API Key, to doit securely check:
+    // Set the SendGrid API Key, to do it securely check:
     // https://github.com/sendgrid/sendgrid-php/blob/master/README.md
     $mail->SendGridApiKey = '';                           // SendGrid API Key.
 
