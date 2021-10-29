@@ -11,14 +11,14 @@
     "type": "library",
     "license": "LGPL-3.0-or-later",
     "require": {
-        "phpmailer/phpmailer": "^6.1",
-        "sendgrid/sendgrid": "^7.0"
+        "phpmailer/phpmailer": "^6.5",
+        "sendgrid/sendgrid": "^7.10"
     },
     "autoload": {
         "psr-4": {
             "PHPMailer\\PHPMailer\\" : "src/"
         }
     },
-    "version": "1.0.3"
+    "version": "1.0.4"
 }
 

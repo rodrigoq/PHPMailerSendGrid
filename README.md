@@ -6,7 +6,7 @@ PHPMailer extension to send emails via Sendgrid (or save to file).
 PHPMailerSendGrid is available on [Packagist](https://packagist.org/packages/rodrigoq/phpmailersendgrid) (using semantic versioning), and installation via [Composer](https://getcomposer.org) is the recommended way to install PHPMailer. Just add this line to your `composer.json` file:
 
 ```json
-"rodrigoq/phpmailersendgrid": "~1.0"
+"rodrigoq/phpmailersendgrid": "^1.0"
 ```
 
 or run
