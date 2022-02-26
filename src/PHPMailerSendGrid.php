@@ -80,7 +80,7 @@ class PHPMailerSendGrid extends PHPMailer
                 $mail->addBcc($bcc[0], $bcc[1]);
             }
 
-            if(isset($this->ReplyTo)) {
+            if(count($this->ReplyTo) > 0) {
                 $replyTo = array_shift($this->ReplyTo);
                 $mail->setReplyTo($replyTo[0], $replyTo[1]);
             }
