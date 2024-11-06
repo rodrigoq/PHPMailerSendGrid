@@ -27,11 +27,18 @@ class PHPMailerSendGrid extends PHPMailer
      */
     public $SendGridApiKey = '';
 
+	/**
+	 * The sendgrid host.
+	 *
+	 * @var string
+	 */
+	public $SendGridHost = '';
+
     /**
-     * The file path.
-     *
-     * @var string
-     */
+	 * The file path.
+	 *
+	 * @var string
+	 */
     public $EmailFilePath = '';
 
     /**
@@ -103,8 +110,12 @@ class PHPMailerSendGrid extends PHPMailer
                     $attach[2], $attach[6], $attach[7]);
             }
 
-            $sendgrid = new \SendGrid($this->SendGridApiKey);
-            $response = $sendgrid->send($mail);
+			$options = array();
+			if ($this->SendGridHost != '') {
+				$options['host'] = $this->SendGridHost;
+			}
+			$sendgrid = new \SendGrid($this->SendGridApiKey, $options);
+			$response = $sendgrid->send($mail);
 
             // Error codes: https://sendgrid.com/docs/API_Reference/Web_API_v3/Mail/errors.html
             if($response->statusCode() != 202) {
